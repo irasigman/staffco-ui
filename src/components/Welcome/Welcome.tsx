@@ -4,20 +4,14 @@ import classes from './Welcome.module.css';
 export function Welcome() {
   return (
     <>
-      <Title className={classes.title} ta="center" mt={100}>
-        Welcome to{' '}
-        <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
-          Mantine
+        <Title className={classes.title} ta="center" mt={100}>
+            <Text inherit component="span" style={{ fontFamily: 'Newsreader', fontWeight: 300 }}>
+                Staff, Co.
+            </Text>
+        </Title>
+        <Text ta="center" mt={10} style={{ fontFamily: 'Newsreader', fontWeight: 300 }}>
+            Instantly scalable knowledge workforce for the modern business.
         </Text>
-      </Title>
-      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        This starter Vite project includes a minimal setup, if you want to learn more on Mantine +
-        Vite integration follow{' '}
-        <Anchor href="https://mantine.dev/guides/vite/" size="lg">
-          this guide
-        </Anchor>
-        . To get started edit pages/Home.page.tsx file.
-      </Text>
     </>
   );
 }
