@@ -1,13 +1,33 @@
 import '@mantine/core/styles.css';
-
-import { MantineProvider } from '@mantine/core';
 import { Router } from './Router';
-import { theme } from './theme';
+
+import { MantineProvider, createTheme, MantineColorsTuple } from '@mantine/core';
+
+const myColor: MantineColorsTuple = [
+    '#f1f4ff',
+    '#e3e5ee',
+    '#c6cad5',
+    '#a8acbc',
+    '#8e93a6',
+    '#7d8399',
+    '#747b94',
+    '#626981',
+    '#565d75',
+    '#48506a'
+  ];
+
+const theme = createTheme({
+  colors: {
+    myColor,
+  }
+});
 
 export default function App() {
-  return (
-    <MantineProvider theme={theme}>
-      <Router />
-    </MantineProvider>
-  );
-}
+    return (
+      <div className="h-screen">
+        <MantineProvider theme={theme}>
+          <Router />
+        </MantineProvider>
+      </div>
+    );
+  }
